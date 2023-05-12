@@ -253,7 +253,7 @@ class Authenticator:
         </style>
         """
         login_link = f"{self.cognito_domain}/login?client_id={self.client_id}&response_type=code&scope=email+openid&redirect_uri={self.app_uri}"
-        logout_link = f"{self.cognito_domain}/logout?client_id={self.client_id}&logout_uri={self.app_uri}%3Flogout=true"
+        logout_link = f"{self.cognito_domain}/logout?client_id={self.client_id}&redirect_uri={self.app_uri}&logout_uri={self.app_uri}%3Flogout=true"
 
         html_button_login = (
             html_css_login
