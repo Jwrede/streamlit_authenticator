@@ -29,7 +29,7 @@ class CookieManager(MutableMapping[str, str]):
 
     def save(self):
         if self._queue:
-            self._run_component(save_only=True, key=f"CookieManager.sync_cookies.save{random.random()}"))
+            self._run_component(save_only=True, key=f"CookieManager.sync_cookies.save{random.random()}")
 
     def _run_component(self, save_only: bool, key: str):
         queue = {
